@@ -9,13 +9,16 @@ const feedbackEl = document.querySelector("#feedback");
 const nextBtn = document.querySelector("#next");
 const restartBtn = document.querySelector("#restart");
 const speakBtn = document.querySelector("#speak");
+const speakExampleBtn = document.querySelector("#speak-example");
 
 const AUDIO_META_URL = "../../data/audio/clips.json";
+const EXAMPLES_META_URL = "../../data/audio/examples.json";
 const AUDIO_DIR = "../../data/audio";
 
 let playback = null;
 let speakToken = 0;
 let clips = {};
+let examples = {};
 
 let letters = [];
 let queue = [];
@@ -69,9 +72,9 @@ function stopPlayback() {
   if ("speechSynthesis" in window) speechSynthesis.cancel();
 }
 
-function speakWithTts(letter) {
-  if (!("speechSynthesis" in window)) return;
-  const utter = new SpeechSynthesisUtterance(letter.name_hy);
+function speakWithTts(text) {
+  if (!("speechSynthesis" in window) || !text) return;
+  const utter = new SpeechSynthesisUtterance(text);
   utter.lang = "hy-AM";
   const voice = speechSynthesis
     .getVoices()
@@ -80,23 +83,36 @@ function speakWithTts(letter) {
   speechSynthesis.speak(utter);
 }
 
-function speakLetter(letter) {
+function playSrc(src, ttsText) {
   stopPlayback();
-  const clip = clips[letter.id];
-  const src = clip?.file
-    ? `${AUDIO_DIR}/${clip.file}`
-    : `${AUDIO_DIR}/letters/${letter.id}.wav`;
   const token = speakToken;
   const audio = new Audio(src);
   playback = audio;
   audio.addEventListener("error", () => {
     if (token !== speakToken) return;
-    speakWithTts(letter);
+    speakWithTts(ttsText);
   });
   audio.play().catch(() => {
     if (token !== speakToken) return;
-    speakWithTts(letter);
+    speakWithTts(ttsText);
   });
+}
+
+function speakLetter(letter) {
+  const clip = clips[letter.id];
+  const src = clip?.file
+    ? `${AUDIO_DIR}/${clip.file}`
+    : `${AUDIO_DIR}/letters/${letter.id}.wav`;
+  playSrc(src, letter.name_hy);
+}
+
+function speakExample(letter) {
+  const clip = examples[letter.id];
+  const text = letter.example?.hy || letter.name_hy;
+  const src = clip?.file
+    ? `${AUDIO_DIR}/${clip.file}`
+    : `${AUDIO_DIR}/examples/${letter.id}.wav`;
+  playSrc(src, text);
 }
 
 function renderCard() {
@@ -106,6 +122,7 @@ function renderCard() {
   feedbackEl.textContent = "";
   nextBtn.disabled = true;
   speakBtn.hidden = true;
+  speakExampleBtn.hidden = true;
   stopPlayback();
 
   if (!current) {
@@ -153,6 +170,10 @@ function choose(option, button) {
   feedbackEl.innerHTML = `<strong>${ok ? "Верно" : "Нет"}.</strong> ${current.name_hy}, ${current.ipa}. ${example}.${note}`;
   nextBtn.disabled = false;
   speakBtn.hidden = false;
+  if (current.example?.hy) {
+    speakExampleBtn.hidden = false;
+    speakExampleBtn.textContent = current.example.hy;
+  }
   queue.shift();
   renderStatus();
 }
@@ -169,14 +190,18 @@ function restart() {
 speakBtn.addEventListener("click", () => {
   if (current) speakLetter(current);
 });
+speakExampleBtn.addEventListener("click", () => {
+  if (current) speakExample(current);
+});
 nextBtn.addEventListener("click", renderCard);
 restartBtn.addEventListener("click", restart);
 
 async function main() {
   try {
-    const [lettersRes, clipsRes] = await Promise.all([
+    const [lettersRes, clipsRes, examplesRes] = await Promise.all([
       fetch(DATA_URL),
       fetch(AUDIO_META_URL),
+      fetch(EXAMPLES_META_URL),
     ]);
     if (!lettersRes.ok) throw new Error(String(lettersRes.status));
     const data = await lettersRes.json();
@@ -185,6 +210,10 @@ async function main() {
     if (clipsRes.ok) {
       const audioMeta = await clipsRes.json();
       clips = audioMeta.clips ?? {};
+    }
+    if (examplesRes.ok) {
+      const exampleMeta = await examplesRes.json();
+      examples = exampleMeta.clips ?? {};
     }
     restart();
   } catch (error) {

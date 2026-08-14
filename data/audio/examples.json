@@ -1,0 +1,201 @@
+{
+  "license": "CC BY-SA (Wikimedia Commons / Lingua Libre file pages)",
+  "notes": "Восточноармянские записи: Hy-*.ogg с Wiktionary и Lingua Libre (hye, Vahagn Petrosyan). է и և — клипы имён букв.",
+  "clips": {
+    "ayb": {
+      "file": "examples/ayb.wav",
+      "source": "File:Hy-արև.ogg",
+      "bytes": 124230
+    },
+    "ben": {
+      "file": "examples/ben.wav",
+      "source": "File:Hy-բարև.ogg",
+      "bytes": 115764
+    },
+    "gim": {
+      "file": "examples/gim.wav",
+      "source": "File:Hy-գիրք.ogg",
+      "bytes": 51298
+    },
+    "da": {
+      "file": "examples/da.wav",
+      "source": "File:Hy-դուռ.ogg",
+      "bytes": 48712
+    },
+    "ech": {
+      "file": "examples/ech.wav",
+      "source": "File:Hy-ես.ogg",
+      "bytes": 119138
+    },
+    "za": {
+      "file": "examples/za.wav",
+      "source": "File:Hy-զավակ.ogg",
+      "bytes": 50490
+    },
+    "e": {
+      "file": "examples/e.wav",
+      "source": "letters/e.wav",
+      "bytes": 31796
+    },
+    "et": {
+      "file": "examples/et.wav",
+      "source": "File:Hy-ընկեր.ogg",
+      "bytes": 48138
+    },
+    "to": {
+      "file": "examples/to.wav",
+      "source": "File:Hy-թեյ.ogg",
+      "bytes": 47050
+    },
+    "zhe": {
+      "file": "examples/zhe.wav",
+      "source": "File:Hy-ժամ.ogg",
+      "bytes": 104474
+    },
+    "ini": {
+      "file": "examples/ini.wav",
+      "source": "File:Hy-իմ.ogg",
+      "bytes": 104474
+    },
+    "lyun": {
+      "file": "examples/lyun.wav",
+      "source": "File:Hy-լավ.ogg",
+      "bytes": 36762
+    },
+    "khe": {
+      "file": "examples/khe.wav",
+      "source": "File:Hy-խաղ.ogg",
+      "bytes": 61260
+    },
+    "tsa": {
+      "file": "examples/tsa.wav",
+      "source": "File:Hy-ծառ.ogg",
+      "bytes": 36628
+    },
+    "ken": {
+      "file": "examples/ken.wav",
+      "source": "File:Hy-կատու.ogg",
+      "bytes": 46770
+    },
+    "ho": {
+      "file": "examples/ho.wav",
+      "source": "File:Hy-հաց.ogg",
+      "bytes": 48638
+    },
+    "dza": {
+      "file": "examples/dza.wav",
+      "source": "File:Hy-ձուկ.ogg",
+      "bytes": 98828
+    },
+    "ghat": {
+      "file": "examples/ghat.wav",
+      "source": "File:Hy-եղբայր.ogg",
+      "bytes": 65130
+    },
+    "che": {
+      "file": "examples/che.wav",
+      "source": "File:Hy-ճաշ.ogg",
+      "bytes": 107296
+    },
+    "men": {
+      "file": "examples/men.wav",
+      "source": "File:Hy-մայր.ogg",
+      "bytes": 43020
+    },
+    "yi": {
+      "file": "examples/yi.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-յոթ.wav",
+      "bytes": 68392
+    },
+    "nu": {
+      "file": "examples/nu.wav",
+      "source": "File:Hy-նոր.ogg",
+      "bytes": 49900
+    },
+    "sha": {
+      "file": "examples/sha.wav",
+      "source": "File:Hy-շուն.ogg",
+      "bytes": 71990
+    },
+    "vo": {
+      "file": "examples/vo.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-ոչ.wav",
+      "bytes": 84776
+    },
+    "cha": {
+      "file": "examples/cha.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-չորս.wav",
+      "bytes": 92968
+    },
+    "pe": {
+      "file": "examples/pe.wav",
+      "source": "File:Hy-պանիր.ogg",
+      "bytes": 112940
+    },
+    "je": {
+      "file": "examples/je.wav",
+      "source": "File:Hy-ջուր.ogg",
+      "bytes": 104474
+    },
+    "ra": {
+      "file": "examples/ra.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-ռուսերեն.wav",
+      "bytes": 117544
+    },
+    "se": {
+      "file": "examples/se.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-սուրճ.wav",
+      "bytes": 92968
+    },
+    "vev": {
+      "file": "examples/vev.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-վաղը.wav",
+      "bytes": 101160
+    },
+    "ti": {
+      "file": "examples/ti.wav",
+      "source": "File:Hy-տուն.ogg",
+      "bytes": 38512
+    },
+    "re": {
+      "file": "examples/re.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-րոպե.wav",
+      "bytes": 109352
+    },
+    "co": {
+      "file": "examples/co.wav",
+      "source": "File:Hy-ցուրտ.ogg",
+      "bytes": 38342
+    },
+    "u": {
+      "file": "examples/u.wav",
+      "source": "File:Hy-ուր.ogg",
+      "bytes": 43406
+    },
+    "pyur": {
+      "file": "examples/pyur.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-փոքր.wav",
+      "bytes": 92968
+    },
+    "ke": {
+      "file": "examples/ke.wav",
+      "source": "File:Hy-քույր.ogg",
+      "bytes": 35442
+    },
+    "yev": {
+      "file": "examples/yev.wav",
+      "source": "letters/yev.wav",
+      "bytes": 47672
+    },
+    "o": {
+      "file": "examples/o.wav",
+      "source": "File:Hy-օր.ogg",
+      "bytes": 49270
+    },
+    "fe": {
+      "file": "examples/fe.wav",
+      "source": "File:LL-Q8785 (hye)-Vahagn Petrosyan-ֆիլմ.wav",
+      "bytes": 84776
+    }
+  }
+}
