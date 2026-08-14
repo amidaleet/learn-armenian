@@ -1,16 +1,340 @@
 {
   "script": "eastern",
-  "notes": "Частые якоря, не тематический зоопарк. Карточка слова всё равно лучше живёт с примерной фразой.",
+  "notes": "Бытовой набор. Каждое слово — с короткой фразой и путём к озвучке. Транслит не кладём.",
   "words": [
-    { "id": "es", "hy": "ես", "ru": "я", "en": "I", "tags": ["pronoun"], "notes": "Омограф: ես ещё значит «ты есть»." },
-    { "id": "du", "hy": "դու", "ru": "ты", "en": "you (informal)", "tags": ["pronoun"] },
-    { "id": "duk", "hy": "դուք", "ru": "вы", "en": "you (polite/plural)", "tags": ["pronoun"] },
-    { "id": "em", "hy": "եմ", "ru": "я есть", "en": "I am", "tags": ["verb", "be"] },
-    { "id": "e", "hy": "է", "ru": "он/она/оно есть", "en": "is", "tags": ["verb", "be"] },
-    { "id": "hats", "hy": "հաց", "ru": "хлеб", "en": "bread", "tags": ["food"] },
-    { "id": "jur", "hy": "ջուր", "ru": "вода", "en": "water", "tags": ["food"] },
-    { "id": "tun", "hy": "տուն", "ru": "дом", "en": "house / home", "tags": ["place"] },
-    { "id": "lav", "hy": "լավ", "ru": "хорошо / хороший", "en": "good", "tags": ["core"] },
-    { "id": "shat", "hy": "շատ", "ru": "очень / много", "en": "very / a lot", "tags": ["core"] }
+    {
+      "id": "es",
+      "hy": "ես",
+      "ru": "я",
+      "en": "I",
+      "tags": ["pronoun"],
+      "audio": "examples/ech.wav",
+      "example": {"hy": "Ես լավ եմ", "ru": "Я в порядке"},
+      "notes": "Омограф: ես ещё значит «ты есть»."
+    },
+    {
+      "id": "im",
+      "hy": "իմ",
+      "ru": "мой",
+      "en": "my",
+      "tags": ["pronoun"],
+      "audio": "examples/ini.wav",
+      "example": {"hy": "Սա իմ տունն է", "ru": "Это мой дом"}
+    },
+    {
+      "id": "lav",
+      "hy": "լավ",
+      "ru": "хорошо / хороший",
+      "en": "good",
+      "tags": ["core"],
+      "audio": "examples/lyun.wav",
+      "example": {"hy": "Լավ է", "ru": "Хорошо / это хорошо"}
+    },
+    {
+      "id": "voch",
+      "hy": "ոչ",
+      "ru": "нет",
+      "en": "no",
+      "tags": ["core"],
+      "audio": "examples/vo.wav",
+      "example": {"hy": "Ոչ, շնորհակալ եմ", "ru": "Нет, спасибо"}
+    },
+    {
+      "id": "barev",
+      "hy": "բարև",
+      "ru": "привет",
+      "en": "hi",
+      "tags": ["greeting"],
+      "audio": "examples/ben.wav",
+      "example": {"hy": "Բարև, ընկեր", "ru": "Привет, друг"}
+    },
+    {
+      "id": "enker",
+      "hy": "ընկեր",
+      "ru": "друг",
+      "en": "friend",
+      "tags": ["people"],
+      "audio": "examples/et.wav",
+      "example": {"hy": "Նա իմ ընկերն է", "ru": "Он мой друг"}
+    },
+    {
+      "id": "mayr",
+      "hy": "մայր",
+      "ru": "мама",
+      "en": "mother",
+      "tags": ["people"],
+      "audio": "examples/men.wav",
+      "example": {"hy": "Սա իմ մայրն է", "ru": "Это моя мама"}
+    },
+    {
+      "id": "yeghbayr",
+      "hy": "եղբայր",
+      "ru": "брат",
+      "en": "brother",
+      "tags": ["people"],
+      "audio": "examples/ghat.wav",
+      "example": {"hy": "Նա իմ եղբայրն է", "ru": "Он мой брат"}
+    },
+    {
+      "id": "kuyr",
+      "hy": "քույր",
+      "ru": "сестра",
+      "en": "sister",
+      "tags": ["people"],
+      "audio": "examples/ke.wav",
+      "example": {"hy": "Սա իմ քույրն է", "ru": "Это моя сестра"}
+    },
+    {
+      "id": "zavak",
+      "hy": "զավակ",
+      "ru": "ребёнок",
+      "en": "child",
+      "tags": ["people"],
+      "audio": "examples/za.wav",
+      "example": {"hy": "Զավակը խաղում է", "ru": "Ребёнок играет"}
+    },
+    {
+      "id": "hats",
+      "hy": "հաց",
+      "ru": "хлеб",
+      "en": "bread",
+      "tags": ["food"],
+      "audio": "examples/ho.wav",
+      "example": {"hy": "Ես հաց եմ ուզում", "ru": "Я хочу хлеб"}
+    },
+    {
+      "id": "jur",
+      "hy": "ջուր",
+      "ru": "вода",
+      "en": "water",
+      "tags": ["food"],
+      "audio": "examples/je.wav",
+      "example": {"hy": "Ես ջուր եմ ուզում", "ru": "Я хочу воду"}
+    },
+    {
+      "id": "tey",
+      "hy": "թեյ",
+      "ru": "чай",
+      "en": "tea",
+      "tags": ["food"],
+      "audio": "examples/to.wav",
+      "example": {"hy": "Ես թեյ եմ ուզում", "ru": "Я хочу чай"}
+    },
+    {
+      "id": "surch",
+      "hy": "սուրճ",
+      "ru": "кофе",
+      "en": "coffee",
+      "tags": ["food"],
+      "audio": "examples/se.wav",
+      "example": {"hy": "Ես սուրճ եմ ուզում", "ru": "Я хочу кофе"}
+    },
+    {
+      "id": "panir",
+      "hy": "պանիր",
+      "ru": "сыр",
+      "en": "cheese",
+      "tags": ["food"],
+      "audio": "examples/pe.wav",
+      "example": {"hy": "Հաց ու պանիր եմ ուզում", "ru": "Я хочу хлеб и сыр"}
+    },
+    {
+      "id": "chash",
+      "hy": "ճաշ",
+      "ru": "обед",
+      "en": "lunch",
+      "tags": ["food"],
+      "audio": "examples/che.wav",
+      "example": {"hy": "Ես ճաշ եմ ուզում", "ru": "Я хочу обед"}
+    },
+    {
+      "id": "dzuk",
+      "hy": "ձուկ",
+      "ru": "рыба",
+      "en": "fish",
+      "tags": ["food"],
+      "audio": "examples/dza.wav",
+      "example": {"hy": "Սա ձուկ է", "ru": "Это рыба"}
+    },
+    {
+      "id": "tun",
+      "hy": "տուն",
+      "ru": "дом",
+      "en": "house / home",
+      "tags": ["place"],
+      "audio": "examples/ti.wav",
+      "example": {"hy": "Գնում եմ տուն", "ru": "Я иду домой"}
+    },
+    {
+      "id": "dur",
+      "hy": "դուռ",
+      "ru": "дверь",
+      "en": "door",
+      "tags": ["place"],
+      "audio": "examples/da.wav",
+      "example": {"hy": "Սա դուռ է", "ru": "Это дверь"}
+    },
+    {
+      "id": "girk",
+      "hy": "գիրք",
+      "ru": "книга",
+      "en": "book",
+      "tags": ["thing"],
+      "audio": "examples/gim.wav",
+      "example": {"hy": "Սա գիրք է", "ru": "Это книга"}
+    },
+    {
+      "id": "khagh",
+      "hy": "խաղ",
+      "ru": "игра",
+      "en": "game",
+      "tags": ["thing"],
+      "audio": "examples/khe.wav",
+      "example": {"hy": "Սա խաղ է", "ru": "Это игра"}
+    },
+    {
+      "id": "film",
+      "hy": "ֆիլմ",
+      "ru": "фильм",
+      "en": "film",
+      "tags": ["thing"],
+      "audio": "examples/fe.wav",
+      "example": {"hy": "Ես ֆիլմ եմ նայում", "ru": "Я смотрю фильм"}
+    },
+    {
+      "id": "katu",
+      "hy": "կատու",
+      "ru": "кот",
+      "en": "cat",
+      "tags": ["animal"],
+      "audio": "examples/ken.wav",
+      "example": {"hy": "Կատուն փոքր է", "ru": "Кот маленький"}
+    },
+    {
+      "id": "shun",
+      "hy": "շուն",
+      "ru": "собака",
+      "en": "dog",
+      "tags": ["animal"],
+      "audio": "examples/sha.wav",
+      "example": {"hy": "Սա շուն է", "ru": "Это собака"}
+    },
+    {
+      "id": "tsar",
+      "hy": "ծառ",
+      "ru": "дерево",
+      "en": "tree",
+      "tags": ["nature"],
+      "audio": "examples/tsa.wav",
+      "example": {"hy": "Ծառը մեծ է", "ru": "Дерево большое"}
+    },
+    {
+      "id": "arev",
+      "hy": "արև",
+      "ru": "солнце",
+      "en": "sun",
+      "tags": ["nature"],
+      "audio": "examples/ayb.wav",
+      "example": {"hy": "Արևը տաք է", "ru": "Солнце тёплое"}
+    },
+    {
+      "id": "tsurt",
+      "hy": "ցուրտ",
+      "ru": "холодный / холодно",
+      "en": "cold",
+      "tags": ["nature"],
+      "audio": "examples/co.wav",
+      "example": {"hy": "Ցուրտ է", "ru": "Холодно"}
+    },
+    {
+      "id": "nor",
+      "hy": "նոր",
+      "ru": "новый",
+      "en": "new",
+      "tags": ["core"],
+      "audio": "examples/nu.wav",
+      "example": {"hy": "Սա նոր գիրք է", "ru": "Это новая книга"}
+    },
+    {
+      "id": "pokr",
+      "hy": "փոքր",
+      "ru": "маленький",
+      "en": "small",
+      "tags": ["core"],
+      "audio": "examples/pyur.wav",
+      "example": {"hy": "Տունը փոքր է", "ru": "Дом маленький"}
+    },
+    {
+      "id": "or",
+      "hy": "օր",
+      "ru": "день",
+      "en": "day",
+      "tags": ["time"],
+      "audio": "examples/o.wav",
+      "example": {"hy": "Լավ օր է", "ru": "Хороший день"}
+    },
+    {
+      "id": "vaghy",
+      "hy": "վաղը",
+      "ru": "завтра",
+      "en": "tomorrow",
+      "tags": ["time"],
+      "audio": "examples/vev.wav",
+      "example": {"hy": "Կտեսնվենք վաղը", "ru": "Увидимся завтра"}
+    },
+    {
+      "id": "zham",
+      "hy": "ժամ",
+      "ru": "час / время",
+      "en": "hour / time",
+      "tags": ["time"],
+      "audio": "examples/zhe.wav",
+      "example": {"hy": "Ի՞նչ ժամ է", "ru": "Который час?"}
+    },
+    {
+      "id": "rope",
+      "hy": "րոպե",
+      "ru": "минута",
+      "en": "minute",
+      "tags": ["time"],
+      "audio": "examples/re.wav",
+      "example": {"hy": "Մեկ րոպե", "ru": "Одну минуту"}
+    },
+    {
+      "id": "yot",
+      "hy": "յոթ",
+      "ru": "семь",
+      "en": "seven",
+      "tags": ["number"],
+      "audio": "examples/yi.wav",
+      "example": {"hy": "Շաբաթը յոթ օր է", "ru": "В неделе семь дней"}
+    },
+    {
+      "id": "chors",
+      "hy": "չորս",
+      "ru": "четыре",
+      "en": "four",
+      "tags": ["number"],
+      "audio": "examples/cha.wav",
+      "example": {"hy": "Չորս հաց եմ ուզում", "ru": "Я хочу четыре хлеба"}
+    },
+    {
+      "id": "ur",
+      "hy": "ուր",
+      "ru": "куда",
+      "en": "where to",
+      "tags": ["survival"],
+      "audio": "examples/u.wav",
+      "example": {"hy": "Ո՞ւր ես գնում", "ru": "Куда ты идёшь?"}
+    },
+    {
+      "id": "ruseren",
+      "hy": "ռուսերեն",
+      "ru": "русский язык",
+      "en": "Russian",
+      "tags": ["survival"],
+      "audio": "examples/ra.wav",
+      "example": {"hy": "Ռուսերեն գիտե՞ս", "ru": "Ты знаешь русский?"}
+    }
   ]
 }
