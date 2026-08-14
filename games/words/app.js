@@ -1,21 +1,30 @@
 const DATA_URL = "../../data/words.json";
 const AUDIO_DIR = "../../data/audio";
 
+const packScreen = document.querySelector("#pack-screen");
+const playScreen = document.querySelector("#play-screen");
+const packsEl = document.querySelector("#packs");
+const packHintEl = document.querySelector("#pack-hint");
 const progressEl = document.querySelector("#progress");
 const scoreEl = document.querySelector("#score");
 const promptEl = document.querySelector("#prompt");
+const heardEl = document.querySelector("#heard");
 const hintEl = document.querySelector("#hint");
 const choicesEl = document.querySelector("#choices");
 const feedbackEl = document.querySelector("#feedback");
 const nextBtn = document.querySelector("#next");
 const restartBtn = document.querySelector("#restart");
 const speakBtn = document.querySelector("#speak");
+const packsBackBtn = document.querySelector("#packs-back");
 
 let playback = null;
 let speakToken = 0;
-let words = [];
+let packs = [];
+let allWords = [];
+let deck = [];
 let queue = [];
 let current = null;
+let selectedPack = null;
 let answered = false;
 let correct = 0;
 let seen = 0;
@@ -42,9 +51,15 @@ function uniqueBy(items, keyFn) {
   });
 }
 
+function wordsForPack(pack) {
+  if (!pack || pack.all) return allWords;
+  return allWords.filter((word) => (word.packs ?? []).includes(pack.id));
+}
+
 function optionsFor(word) {
+  const source = deck.length >= 4 ? deck : allWords;
   const pool = uniqueBy(
-    words.filter((item) => item.id !== word.id),
+    source.filter((item) => item.id !== word.id),
     (item) => item.ru,
   );
   const distractors = shuffle(pool).slice(0, 3);
@@ -52,9 +67,10 @@ function optionsFor(word) {
 }
 
 function renderStatus() {
+  const packLabel = selectedPack?.title ?? "";
   progressEl.textContent = queue.length
-    ? `Карточка ${seen + (answered ? 0 : 1)} из ${words.length}`
-    : "Колода пройдена";
+    ? `${packLabel}: ${seen + (answered ? 0 : 1)} / ${deck.length}`
+    : `${packLabel}: колода пройдена`;
   scoreEl.textContent = seen ? `Верно ${correct} / ${seen}` : "";
 }
 
@@ -100,6 +116,46 @@ function speakWord(word) {
   });
 }
 
+function showPacks() {
+  stopPlayback();
+  selectedPack = null;
+  deck = [];
+  queue = [];
+  current = null;
+  playScreen.hidden = true;
+  packScreen.hidden = false;
+  packHintEl.textContent = "Выбери смысловой пакет.";
+  packsEl.replaceChildren(
+    ...packs.map((pack) => {
+      const count = wordsForPack(pack).length;
+      const button = document.createElement("button");
+      button.className = "btn pack";
+      button.type = "button";
+      const title = document.createElement("strong");
+      title.textContent = pack.title;
+      const meta = document.createElement("span");
+      meta.className = "muted";
+      meta.textContent = pack.blurb
+        ? `${count} слов · ${pack.blurb}`
+        : `${count} слов`;
+      button.append(title, meta);
+      button.disabled = count < 4;
+      button.addEventListener("click", () => startPack(pack));
+      return button;
+    }),
+  );
+}
+
+function startPack(pack) {
+  const nextDeck = wordsForPack(pack);
+  if (nextDeck.length < 4) return;
+  selectedPack = pack;
+  deck = nextDeck;
+  packScreen.hidden = true;
+  playScreen.hidden = false;
+  restart();
+}
+
 function renderCard() {
   answered = false;
   current = queue[0] ?? null;
@@ -110,8 +166,9 @@ function renderCard() {
 
   if (!current) {
     promptEl.textContent = "Վերջ";
+    heardEl.textContent = "";
     hintEl.textContent =
-      roundHint || "Ещё круг — или скажи те же слова вслух по примерам.";
+      roundHint || "Ещё круг в этом пакете — или скажи примеры вслух.";
     choicesEl.replaceChildren();
     speakBtn.hidden = true;
     renderStatus();
@@ -119,6 +176,7 @@ function renderCard() {
   }
 
   promptEl.textContent = current.hy;
+  heardEl.textContent = current.heard ? `как слышится: ${current.heard}` : "";
   hintEl.textContent = "Какой смысл? Слушай слово, потом выбери перевод.";
   speakBtn.hidden = false;
   speakBtn.textContent = "Слушать";
@@ -176,7 +234,11 @@ function choose(option, button) {
 }
 
 function restart() {
-  queue = shuffle(words);
+  if (!selectedPack || deck.length < 4) {
+    showPacks();
+    return;
+  }
+  queue = shuffle(deck);
   current = null;
   answered = false;
   correct = 0;
@@ -191,22 +253,25 @@ async function logRound() {
   if (roundLogged || !seen) return;
   roundLogged = true;
   const minutes = Math.max(0, Math.round((Date.now() - roundStartedAt) / 60000));
+  const packTitle = selectedPack?.title ?? "";
   try {
     const response = await fetch("/log/round", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         game: "слова",
+        pack: packTitle,
         correct,
         total: seen,
         minutes,
       }),
     });
     if (!response.ok) throw new Error(String(response.status));
-    roundHint = `В журнал: ${correct}/${seen}, ${minutes} мин. Ещё круг — или скажи примеры вслух.`;
+    const packBit = packTitle ? `${packTitle}, ` : "";
+    roundHint = `В журнал: ${packBit}${correct}/${seen}, ${minutes} мин. Ещё круг — или другой пакет.`;
   } catch {
     roundHint =
-      "Журнал не записался — открой игру через ./Xfile serve. Ещё круг — или скажи примеры вслух.";
+      "Журнал не записался — открой игру через ./Xfile serve. Ещё круг — или другой пакет.";
   }
   hintEl.textContent = roundHint;
 }
@@ -216,19 +281,22 @@ speakBtn.addEventListener("click", () => {
 });
 nextBtn.addEventListener("click", renderCard);
 restartBtn.addEventListener("click", restart);
+packsBackBtn.addEventListener("click", showPacks);
 
 async function main() {
   try {
     const response = await fetch(DATA_URL);
     if (!response.ok) throw new Error(String(response.status));
     const data = await response.json();
-    words = data.words ?? [];
-    if (words.length < 4) throw new Error("too few words");
-    restart();
+    allWords = data.words ?? [];
+    packs = data.packs ?? [];
+    if (!packs.length) {
+      packs = [{ id: "all", title: "Все слова", blurb: "Вся колода", all: true }];
+    }
+    if (allWords.length < 4) throw new Error("too few words");
+    showPacks();
   } catch (error) {
-    progressEl.textContent = "Нет данных";
-    promptEl.textContent = "?";
-    hintEl.textContent = "Открой игры через ./Xfile serve из корня репо";
+    packHintEl.textContent = "Открой игры через ./Xfile serve из корня репо";
     console.error(error);
   }
 }

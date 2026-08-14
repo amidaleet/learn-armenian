@@ -9,3 +9,5 @@ The game plays `letters/{id}.wav` — slices from that recitation. The recording
 
 Example words are `examples/{id}.wav`: Eastern Armenian pronunciations from Wiktionary (`Hy-….ogg`) and [Lingua Libre](https://lingualibre.org/) (`hye`, Vahagn Petrosyan). `է` and `և` reuse the letter-name clips.
 
+Word-game clips are `words/{id}.wav` — the same Commons / Lingua Libre recordings, converted to 44.1 kHz mono. Sources are listed in `audio/words.json`. A few everyday words still have no public clip (`հիմա`, `ուշ`, `քամի`, `կանգառ`, `ինչու`, `ներեցեք`).
+

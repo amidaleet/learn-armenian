@@ -1,0 +1,481 @@
+{
+  "license": "CC BY-SA (Wikimedia Commons / Lingua Libre / Wiktionary file pages)",
+  "notes": "Восточноармянские клипы для игры «Слова». Скачаны с Commons, при 429 — копия с web.archive.org. Конвертация в 44.1 kHz mono wav.",
+  "clips": {
+    "du": {
+      "file": "words/du.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-դու.wav",
+      "bytes": 62878
+    },
+    "na": {
+      "file": "words/na.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-նա.wav",
+      "bytes": 70404
+    },
+    "menq": {
+      "file": "words/menq.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-մենք.wav",
+      "bytes": 77928
+    },
+    "duq": {
+      "file": "words/duq.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-դուք.wav",
+      "bytes": 62878
+    },
+    "hayr": {
+      "file": "words/hayr.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-հայր.wav",
+      "bytes": 77928
+    },
+    "mard": {
+      "file": "words/mard.wav",
+      "source": "File:Hy-մարդ.ogg",
+      "bytes": 62556
+    },
+    "anun": {
+      "file": "words/anun.wav",
+      "source": "File:Hy-անուն.ogg",
+      "bytes": 47152
+    },
+    "kin": {
+      "file": "words/kin.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-կին.wav",
+      "bytes": 70404
+    },
+    "tgha": {
+      "file": "words/tgha.wav",
+      "source": "File:Hy-տղա.ogg",
+      "bytes": 129412
+    },
+    "aghjik": {
+      "file": "words/aghjik.wav",
+      "source": "File:Hy-աղջիկ.ogg",
+      "bytes": 49730
+    },
+    "mis": {
+      "file": "words/mis.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-միս.wav",
+      "bytes": 77928
+    },
+    "kath": {
+      "file": "words/kath.wav",
+      "source": "File:Hy-կաթ.ogg",
+      "bytes": 56246
+    },
+    "khndzor": {
+      "file": "words/khndzor.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-խնձոր.wav",
+      "bytes": 85456
+    },
+    "agh": {
+      "file": "words/agh.wav",
+      "source": "File:Hy-աղ.ogg",
+      "bytes": 31154
+    },
+    "dzu": {
+      "file": "words/dzu.wav",
+      "source": "File:Hy-ձու.ogg",
+      "bytes": 42798
+    },
+    "hav": {
+      "file": "words/hav.wav",
+      "source": "File:Hy-հավ.ogg",
+      "bytes": 33290
+    },
+    "gini": {
+      "file": "words/gini.wav",
+      "source": "File:Hy-գինի.ogg",
+      "bytes": 41064
+    },
+    "shakar": {
+      "file": "words/shakar.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-շաքար.wav",
+      "bytes": 85456
+    },
+    "utelq": {
+      "file": "words/utelq.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-ուտելիք.wav",
+      "bytes": 92982
+    },
+    "lolik": {
+      "file": "words/lolik.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-լոլիկ.wav",
+      "bytes": 92982
+    },
+    "patuhan": {
+      "file": "words/patuhan.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-պատուհան.wav",
+      "bytes": 100510
+    },
+    "sexan": {
+      "file": "words/sexan.wav",
+      "source": "File:Hy-սեղան.ogg",
+      "bytes": 60192
+    },
+    "ator": {
+      "file": "words/ator.wav",
+      "source": "File:Hy-աթոռ.ogg",
+      "bytes": 53380
+    },
+    "senyak": {
+      "file": "words/senyak.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-սենյակ.wav",
+      "bytes": 100510
+    },
+    "khohanoc": {
+      "file": "words/khohanoc.wav",
+      "source": "File:Hy-խոհանոց.ogg",
+      "bytes": 60650
+    },
+    "luys": {
+      "file": "words/luys.wav",
+      "source": "File:Hy-լույս.ogg",
+      "bytes": 70130
+    },
+    "banali": {
+      "file": "words/banali.wav",
+      "source": "File:Hy-բանալի.ogg",
+      "bytes": 121442
+    },
+    "herakhos": {
+      "file": "words/herakhos.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-հեռախոս.wav",
+      "bytes": 100510
+    },
+    "payusak": {
+      "file": "words/payusak.wav",
+      "source": "File:Hy-պայուսակ.ogg",
+      "bytes": 121442
+    },
+    "pox": {
+      "file": "words/pox.wav",
+      "source": "File:Hy-փող.ogg",
+      "bytes": 33428
+    },
+    "gdal": {
+      "file": "words/gdal.wav",
+      "source": "File:Hy-գդալ.ogg",
+      "bytes": 172932
+    },
+    "apse": {
+      "file": "words/apse.wav",
+      "source": "File:Hy-ափսե.ogg",
+      "bytes": 112974
+    },
+    "qaghaq": {
+      "file": "words/qaghaq.wav",
+      "source": "File:Hy-քաղաք.ogg",
+      "bytes": 107330
+    },
+    "poxoc": {
+      "file": "words/poxoc.wav",
+      "source": "File:Hy-փողոց.ogg",
+      "bytes": 42788
+    },
+    "khanut": {
+      "file": "words/khanut.wav",
+      "source": "File:LL-Q8785_(hye)-Veravi95-խանութ.wav",
+      "bytes": 77694
+    },
+    "shuka": {
+      "file": "words/shuka.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-շուկա.wav",
+      "bytes": 85456
+    },
+    "meqena": {
+      "file": "words/meqena.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-մեքենա.wav",
+      "bytes": 92982
+    },
+    "avtobus": {
+      "file": "words/avtobus.wav",
+      "source": "File:Hy-ավտոբուս.ogg",
+      "bytes": 132920
+    },
+    "chanaparh": {
+      "file": "words/chanaparh.wav",
+      "source": "File:Hy-ճանապարհ.ogg",
+      "bytes": 124264
+    },
+    "aj": {
+      "file": "words/aj.wav",
+      "source": "File:Hy-աջ.ogg",
+      "bytes": 121442
+    },
+    "dzakh": {
+      "file": "words/dzakh.wav",
+      "source": "File:Hy-ձախ.ogg",
+      "bytes": 115798
+    },
+    "mot": {
+      "file": "words/mot.wav",
+      "source": "File:LL-Q8785_(hye)-Veravi95-մոտ.wav",
+      "bytes": 80280
+    },
+    "heru": {
+      "file": "words/heru.wav",
+      "source": "File:Hy-հեռու.ogg",
+      "bytes": 43138
+    },
+    "gnal": {
+      "file": "words/gnal.wav",
+      "source": "File:Hy-գնալ.ogg",
+      "bytes": 59126
+    },
+    "gal": {
+      "file": "words/gal.wav",
+      "source": "File:Hy-գալ.ogg",
+      "bytes": 59402
+    },
+    "aysor": {
+      "file": "words/aysor.wav",
+      "source": "File:Hy-այսօր.ogg",
+      "bytes": 132920
+    },
+    "yerek": {
+      "file": "words/yerek.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-երեկ.wav",
+      "bytes": 85456
+    },
+    "aravot": {
+      "file": "words/aravot.wav",
+      "source": "File:Hy-առավոտ.ogg",
+      "bytes": 137330
+    },
+    "yereko": {
+      "file": "words/yereko.wav",
+      "source": "File:Hy-երեկո.ogg",
+      "bytes": 128132
+    },
+    "gisher": {
+      "file": "words/gisher.wav",
+      "source": "File:Hy-գիշեր.ogg",
+      "bytes": 120452
+    },
+    "shabat": {
+      "file": "words/shabat.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-շաբաթ.wav",
+      "bytes": 85456
+    },
+    "amis": {
+      "file": "words/amis.wav",
+      "source": "File:Hy-ամիս.ogg",
+      "bytes": 115798
+    },
+    "tari": {
+      "file": "words/tari.wav",
+      "source": "File:Hy-տարի.ogg",
+      "bytes": 50392
+    },
+    "vagh": {
+      "file": "words/vagh.wav",
+      "source": "File:Hy-վաղ.ogg",
+      "bytes": 33210
+    },
+    "mek": {
+      "file": "words/mek.wav",
+      "source": "File:Hy-մեկ.ogg",
+      "bytes": 108932
+    },
+    "yerku": {
+      "file": "words/yerku.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-երկու.wav",
+      "bytes": 85456
+    },
+    "yereq": {
+      "file": "words/yereq.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-երեք.wav",
+      "bytes": 85456
+    },
+    "hing": {
+      "file": "words/hing.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-հինգ.wav",
+      "bytes": 77928
+    },
+    "vets": {
+      "file": "words/vets.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-վեց.wav",
+      "bytes": 123088
+    },
+    "ut": {
+      "file": "words/ut.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-ութ.wav",
+      "bytes": 55350
+    },
+    "iny": {
+      "file": "words/iny.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-ինը.wav",
+      "bytes": 77928
+    },
+    "tasy": {
+      "file": "words/tasy.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-տասը.wav",
+      "bytes": 85456
+    },
+    "andzrev": {
+      "file": "words/andzrev.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-անձրեւ.wav",
+      "bytes": 132920
+    },
+    "dzyun": {
+      "file": "words/dzyun.wav",
+      "source": "File:HY-ձյուն.ogg",
+      "bytes": 121442
+    },
+    "ler": {
+      "file": "words/ler.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-լեռ.wav",
+      "bytes": 85456
+    },
+    "get": {
+      "file": "words/get.wav",
+      "source": "File:Hy-գետ.ogg",
+      "bytes": 36256
+    },
+    "tsov": {
+      "file": "words/tsov.wav",
+      "source": "File:Hy-ծով.ogg",
+      "bytes": 44254
+    },
+    "yerkinq": {
+      "file": "words/yerkinq.wav",
+      "source": "File:Hy-երկինք.ogg",
+      "bytes": 54890
+    },
+    "tsaghik": {
+      "file": "words/tsaghik.wav",
+      "source": "File:Hy-ծաղիկ.ogg",
+      "bytes": 60664
+    },
+    "tak": {
+      "file": "words/tak.wav",
+      "source": "File:Hy-տաք.ogg",
+      "bytes": 33382
+    },
+    "dzi": {
+      "file": "words/dzi.wav",
+      "source": "File:Hy-ձի.ogg",
+      "bytes": 31732
+    },
+    "trchun": {
+      "file": "words/trchun.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-թռչուն.wav",
+      "bytes": 92982
+    },
+    "kov": {
+      "file": "words/kov.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-կով.wav",
+      "bytes": 70404
+    },
+    "muk": {
+      "file": "words/muk.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-մուկ.wav",
+      "bytes": 77928
+    },
+    "khoz": {
+      "file": "words/khoz.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-խոզ.wav",
+      "bytes": 77928
+    },
+    "ochxar": {
+      "file": "words/ochxar.wav",
+      "source": "File:LL-Q8785_(hye)-Vahagn_Petrosyan-ոչխար.wav",
+      "bytes": 92982
+    },
+    "mets": {
+      "file": "words/mets.wav",
+      "source": "File:Hy-մեծ.ogg",
+      "bytes": 58770
+    },
+    "vat": {
+      "file": "words/vat.wav",
+      "source": "File:Hy-վատ.ogg",
+      "bytes": 31554
+    },
+    "shat": {
+      "file": "words/shat.wav",
+      "source": "File:Hy-շատ.ogg",
+      "bytes": 45166
+    },
+    "qich": {
+      "file": "words/qich.wav",
+      "source": "File:Hy-քիչ.ogg",
+      "bytes": 133252
+    },
+    "hin": {
+      "file": "words/hin.wav",
+      "source": "File:Hy-հին.ogg",
+      "bytes": 36380
+    },
+    "geghcik": {
+      "file": "words/geghcik.wav",
+      "source": "File:Hy-գեղեցիկ.ogg",
+      "bytes": 73286
+    },
+    "erkar": {
+      "file": "words/erkar.wav",
+      "source": "File:Hy-երկար.ogg",
+      "bytes": 58668
+    },
+    "karch": {
+      "file": "words/karch.wav",
+      "source": "File:Hy-կարճ.ogg",
+      "bytes": 129412
+    },
+    "ayo": {
+      "file": "words/ayo.wav",
+      "source": "File:Hy-այո.ogg",
+      "bytes": 112974
+    },
+    "shnorh": {
+      "file": "words/shnorh.wav",
+      "source": "File:Hy-շնորհակալություն.ogg",
+      "bytes": 99074
+    },
+    "khndrem": {
+      "file": "words/khndrem.wav",
+      "source": "File:LL-Q8785_(hye)-Yevgenya_Shamshyan_(Vahagn_Petrosyan)-խնդրեմ.wav",
+      "bytes": 92982
+    },
+    "inch": {
+      "file": "words/inch.wav",
+      "source": "File:Hy-ինչ.ogg",
+      "bytes": 54984
+    },
+    "ov": {
+      "file": "words/ov.wav",
+      "source": "File:Hy-ով.ogg",
+      "bytes": 39860
+    },
+    "inchpes": {
+      "file": "words/inchpes.wav",
+      "source": "File:Hy-ինչպես.ogg",
+      "bytes": 66480
+    },
+    "aystegh": {
+      "file": "words/aystegh.wav",
+      "source": "File:Hy-այստեղ.ogg",
+      "bytes": 128510
+    },
+    "ayntex": {
+      "file": "words/ayntex.wav",
+      "source": "File:Hy-այնտեղ.ogg",
+      "bytes": 121442
+    },
+    "vortegh": {
+      "file": "words/vortegh.wav",
+      "source": "File:Hy-որտեղ.ogg",
+      "bytes": 152452
+    },
+    "uzel": {
+      "file": "words/uzel.wav",
+      "source": "File:LL-Q8785_(hye)-Veravi95-ուզել.wav",
+      "bytes": 84750
+    },
+    "haskanal": {
+      "file": "words/haskanal.wav",
+      "source": "File:Hy-հասկանալ.ogg",
+      "bytes": 100510
+    }
+  }
+}

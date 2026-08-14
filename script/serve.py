@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import signal
 import sys
+import threading
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
@@ -28,6 +30,7 @@ class Handler(SimpleHTTPRequestHandler):
             payload = json.loads(self.rfile.read(length) or b"{}")
             message = journal.add_round(
                 game=str(payload.get("game") or ""),
+                pack=str(payload.get("pack") or ""),
                 correct=int(payload["correct"]),
                 total=int(payload["total"]),
                 minutes=None if payload.get("minutes") is None else int(payload["minutes"]),
@@ -52,13 +55,35 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(data)
 
 
+def _watch_off(stop: threading.Event) -> None:
+    for line in sys.stdin:
+        if line.strip().lower() == "off":
+            stop.set()
+            return
+
+
+def _shutdown_when_stopped(httpd: ThreadingHTTPServer, stop: threading.Event) -> None:
+    stop.wait()
+    httpd.shutdown()
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="serve.py")
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args(argv)
     httpd = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
     journal.log_success(f"http://127.0.0.1:{args.port}/games/")
+    if sys.stdin.isatty():
+        journal.log_success("off — остановить сервер")
+
+    stop = threading.Event()
+    signal.signal(signal.SIGINT, lambda *_: stop.set())
+    threading.Thread(target=_shutdown_when_stopped, args=(httpd, stop), daemon=True).start()
+    if sys.stdin.isatty():
+        threading.Thread(target=_watch_off, args=(stop,), daemon=True).start()
+
     httpd.serve_forever()
+    httpd.server_close()
     return 0
 
 

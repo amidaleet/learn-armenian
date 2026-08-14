@@ -55,11 +55,17 @@ def start_session(focus: str = "", now: datetime | None = None) -> str:
     return f"Старт сессии {date} {time} ({path.relative_to(ROOT)})"
 
 
+def _clean_pack(pack: str) -> str:
+    pack = " ".join(pack.replace(",", " ").split())
+    return pack[:40].rstrip()
+
+
 def add_round(
     game: str,
     correct: int,
     total: int,
     minutes: int | None = None,
+    pack: str = "",
     now: datetime | None = None,
 ) -> str:
     game = game.strip()
@@ -75,7 +81,11 @@ def add_round(
     if not path.exists():
         start_session(focus=game, now=now)
 
-    parts = [game, f"{correct}/{total}"]
+    parts = [game]
+    pack = _clean_pack(pack)
+    if pack:
+        parts.append(pack)
+    parts.append(f"{correct}/{total}")
     if minutes is not None:
         parts.append(f"{minutes} мин")
     summary = ", ".join(parts)
@@ -96,6 +106,7 @@ def main(argv: list[str] | None = None) -> int:
 
     round_cmd = sub.add_parser("round", help="дописать результат раунда")
     round_cmd.add_argument("--game", required=True)
+    round_cmd.add_argument("--pack", default="")
     round_cmd.add_argument("--correct", type=int, required=True)
     round_cmd.add_argument("--total", type=int, required=True)
     round_cmd.add_argument("--minutes", type=int, default=None)
@@ -108,6 +119,7 @@ def main(argv: list[str] | None = None) -> int:
             log_success(
                 add_round(
                     game=args.game,
+                    pack=args.pack,
                     correct=args.correct,
                     total=args.total,
                     minutes=args.minutes,
