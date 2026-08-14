@@ -41,7 +41,8 @@ log/                  дневник занятий
   TEMPLATE.md
 script/               python-логика задач Xfile
   journal.py
-Xfile                 задачи репо (`x serve`, `x session`, `x minutes`)
+  serve.py
+Xfile                 задачи репо (`x serve`, `x session`)
 Xfile_source/         движок оркестратора
 ```
 
@@ -58,14 +59,7 @@ Xfile_source/         движок оркестратора
 ./Xfile session --focus алфавит
 ```
 
-Пишет блок в `log/YYYY-MM-DD.md` (создаёт файл, если его ещё нет). Минуты в последний блок:
-
-```bash
-./Xfile minutes
-./Xfile minutes --minutes 25
-```
-
-Без аргумента считает от «Старт» последней сессии. Потом дописываешь фразы руками.
+Пишет блок в `log/YYYY-MM-DD.md`. После раунда алфавита игра сама дописывает строку `Раунд` (счёт и минуты), если открыта через `./Xfile serve`. Фразы вслух — руками.
 
 ## План
 
@@ -94,7 +88,7 @@ Xfile_source/         движок оркестратора
 x serve
 ```
 
-Другой порт: `./Xfile serve --port 9000`. Дальше [http://127.0.0.1:8000/games/](http://127.0.0.1:8000/games/). `file://` не подхватит JSON.
+Другой порт: `./Xfile serve --port 9000`. Дальше [http://127.0.0.1:8000/games/](http://127.0.0.1:8000/games/). `file://` не подхватит JSON и не запишет раунд в журнал.
 
 Список задач: `./Xfile help`.
 

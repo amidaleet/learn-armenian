@@ -27,6 +27,10 @@ let answered = false;
 let correct = 0;
 let seen = 0;
 
+let roundStartedAt = 0;
+let roundLogged = false;
+let roundHint = "";
+
 function shuffle(items) {
   const copy = [...items];
   for (let i = copy.length - 1; i > 0; i -= 1) {
@@ -127,7 +131,8 @@ function renderCard() {
 
   if (!current) {
     promptEl.textContent = "Վերջ";
-    hintEl.textContent = "Ещё круг — или иди читать вслух те же буквы без вариантов.";
+    hintEl.textContent =
+      roundHint || "Ещё круг — или иди читать вслух те же буквы без вариантов.";
     choicesEl.replaceChildren();
     renderStatus();
     return;
@@ -176,6 +181,7 @@ function choose(option, button) {
   }
   queue.shift();
   renderStatus();
+  if (!queue.length) logRound();
 }
 
 function restart() {
@@ -184,7 +190,34 @@ function restart() {
   answered = false;
   correct = 0;
   seen = 0;
+  roundStartedAt = Date.now();
+  roundLogged = false;
+  roundHint = "";
   renderCard();
+}
+
+async function logRound() {
+  if (roundLogged || !seen) return;
+  roundLogged = true;
+  const minutes = Math.max(0, Math.round((Date.now() - roundStartedAt) / 60000));
+  try {
+    const response = await fetch("/log/round", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        game: "алфавит",
+        correct,
+        total: seen,
+        minutes,
+      }),
+    });
+    if (!response.ok) throw new Error(String(response.status));
+    roundHint = `В журнал: ${correct}/${seen}, ${minutes} мин. Ещё круг — или читай вслух.`;
+  } catch {
+    roundHint =
+      "Журнал не записался — открой игру через ./Xfile serve. Ещё круг — или читай вслух.";
+  }
+  hintEl.textContent = roundHint;
 }
 
 speakBtn.addEventListener("click", () => {
