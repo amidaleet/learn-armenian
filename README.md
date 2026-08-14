@@ -39,7 +39,9 @@ games/                HTML без сборки
 notes/                короткие наблюдения, не конспекты
 log/                  дневник занятий
   TEMPLATE.md
-Xfile                 задачи репо (`x serve`)
+script/               python-логика задач Xfile
+  journal.py
+Xfile                 задачи репо (`x serve`, `x session`, `x minutes`)
 Xfile_source/         движок оркестратора
 ```
 
@@ -49,11 +51,21 @@ Xfile_source/         движок оркестратора
 
 **Фраза / слово**: `id`, `hy`, `ru`, `en`, `tags`, по необходимости `notes`. Смысловой якорь — `ru`. Поле `en` — запасной пояснительный слой, не то, что учим.
 
-В `notes/` один файл — одна тема (`ech-vs-e.md`, `aspiration.md`). В `log/` копия шаблона на дату:
+В `notes/` один файл — одна тема (`ech-vs-e.md`, `aspiration.md`). Старт занятия:
 
-```text
-log/2026-08-14.md
+```bash
+./Xfile session
+./Xfile session --focus алфавит
 ```
+
+Пишет блок в `log/YYYY-MM-DD.md` (создаёт файл, если его ещё нет). Минуты в последний блок:
+
+```bash
+./Xfile minutes
+./Xfile minutes --minutes 25
+```
+
+Без аргумента считает от «Старт» последней сессии. Потом дописываешь фразы руками.
 
 ## План
 
@@ -82,7 +94,7 @@ log/2026-08-14.md
 x serve
 ```
 
-Другой порт: `./Xfile serve PORT=9000`. Дальше [http://127.0.0.1:8000/games/](http://127.0.0.1:8000/games/). `file://` не подхватит JSON.
+Другой порт: `./Xfile serve --port 9000`. Дальше [http://127.0.0.1:8000/games/](http://127.0.0.1:8000/games/). `file://` не подхватит JSON.
 
 Список задач: `./Xfile help`.
 

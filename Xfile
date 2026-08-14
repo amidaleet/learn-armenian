@@ -11,12 +11,34 @@ source "$GIT_ROOT/Xfile_source/impl.sh"
 
 link_child_xfile "$GIT_ROOT/Xfile_source/tests/tests.sh" '' test_xfile
 
+JOURNAL_PY="$GIT_ROOT/script/journal.py"
+
+# ---------- Journal ----------
+
+## -f --focus
+function session { ## Зафиксировать старт занятия в log/YYYY-MM-DD.md
+  local FOCUS
+  read_opt -f --focus FOCUS
+  python3 "$JOURNAL_PY" session --focus "$FOCUS"
+}
+
+## -m --minutes
+function minutes { ## Дописать минуты в последний блок сегодняшнего журнала
+  local MINUTES
+  read_opt -m --minutes MINUTES
+  if [ -n "$MINUTES" ]; then
+    python3 "$JOURNAL_PY" minutes --minutes "$MINUTES"
+  else
+    python3 "$JOURNAL_PY" minutes
+  fi
+}
+
 # ---------- Games ----------
 
-## PORT=8000
+## -p --port
 function serve { ## HTTP-сервер с корня репо (игры читают data/*.json)
   local PORT
-  read_args PORT
+  read_opt -p --port PORT
   PORT=${PORT:-8000}
 
   log_info "http://127.0.0.1:${PORT}/games/"
