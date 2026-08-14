@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+_THIS_DIR=$(cd "$(dirname "$0")" && pwd)
+export GIT_ROOT="$_THIS_DIR"
+export ROOT_XFILE_PATH="$GIT_ROOT/Xfile"
+cd "$GIT_ROOT"
+
+source "$GIT_ROOT/Xfile_source/impl.sh"
+
+link_child_xfile "$GIT_ROOT/Xfile_source/tests/tests.sh" '' test_xfile
+
+# ---------- Games ----------
+
+## PORT=8000
+function serve { ## HTTP-сервер с корня репо (игры читают data/*.json)
+  local PORT
+  read_args PORT
+  PORT=${PORT:-8000}
+
+  log_info "http://127.0.0.1:${PORT}/games/"
+  python3 -m http.server "$PORT"
+}
+
+begin_xfile_task

@@ -1,0 +1,16 @@
+{
+  "script": "eastern",
+  "notes": "Частые якоря, не тематический зоопарк. Карточка слова всё равно лучше живёт с примерной фразой.",
+  "words": [
+    { "id": "es", "hy": "ես", "ru": "я", "en": "I", "tags": ["pronoun"], "notes": "Омограф: ես ещё значит «ты есть»." },
+    { "id": "du", "hy": "դու", "ru": "ты", "en": "you (informal)", "tags": ["pronoun"] },
+    { "id": "duk", "hy": "դուք", "ru": "вы", "en": "you (polite/plural)", "tags": ["pronoun"] },
+    { "id": "em", "hy": "եմ", "ru": "я есть", "en": "I am", "tags": ["verb", "be"] },
+    { "id": "e", "hy": "է", "ru": "он/она/оно есть", "en": "is", "tags": ["verb", "be"] },
+    { "id": "hats", "hy": "հաց", "ru": "хлеб", "en": "bread", "tags": ["food"] },
+    { "id": "jur", "hy": "ջուր", "ru": "вода", "en": "water", "tags": ["food"] },
+    { "id": "tun", "hy": "տուն", "ru": "дом", "en": "house / home", "tags": ["place"] },
+    { "id": "lav", "hy": "լավ", "ru": "хорошо / хороший", "en": "good", "tags": ["core"] },
+    { "id": "shat", "hy": "շատ", "ru": "очень / много", "en": "very / a lot", "tags": ["core"] }
+  ]
+}

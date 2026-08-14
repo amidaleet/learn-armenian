@@ -1,0 +1,417 @@
+{
+  "script": "eastern",
+  "notes": "39 графем восточноармянского: 36 классических + օ, ֆ и лигатура և. ու — диграф, его тоже учат как отдельную «букву».",
+  "letters": [
+    {
+      "id": "ayb",
+      "upper": "Ա",
+      "lower": "ա",
+      "name_hy": "այբ",
+      "ipa": "ɑ",
+      "ru_approx": "а",
+      "en_approx": "a as in father",
+      "example": { "hy": "արև", "ru": "солнце", "en": "sun" }
+    },
+    {
+      "id": "ben",
+      "upper": "Բ",
+      "lower": "բ",
+      "name_hy": "բեն",
+      "ipa": "b",
+      "ru_approx": "б",
+      "en_approx": "b",
+      "example": { "hy": "բարև", "ru": "привет", "en": "hi" }
+    },
+    {
+      "id": "gim",
+      "upper": "Գ",
+      "lower": "գ",
+      "name_hy": "գիմ",
+      "ipa": "ɡ",
+      "ru_approx": "г",
+      "en_approx": "g as in go",
+      "example": { "hy": "գիրք", "ru": "книга", "en": "book" }
+    },
+    {
+      "id": "da",
+      "upper": "Դ",
+      "lower": "դ",
+      "name_hy": "դա",
+      "ipa": "d",
+      "ru_approx": "д",
+      "en_approx": "d",
+      "example": { "hy": "դուռ", "ru": "дверь", "en": "door" }
+    },
+    {
+      "id": "ech",
+      "upper": "Ե",
+      "lower": "ե",
+      "name_hy": "եչ",
+      "ipa": "ɛ ~ jɛ",
+      "ru_approx": "е / йе",
+      "en_approx": "ye at start, e elsewhere",
+      "example": { "hy": "ես", "ru": "я", "en": "I" },
+      "notes": "В начале слова и после гласной обычно «йе»: ես, Երևան. После согласной ближе к «е»."
+    },
+    {
+      "id": "za",
+      "upper": "Զ",
+      "lower": "զ",
+      "name_hy": "զա",
+      "ipa": "z",
+      "ru_approx": "з",
+      "en_approx": "z",
+      "example": { "hy": "զրույց", "ru": "разговор", "en": "conversation" }
+    },
+    {
+      "id": "e",
+      "upper": "Է",
+      "lower": "է",
+      "name_hy": "է",
+      "ipa": "ɛ",
+      "ru_approx": "э",
+      "en_approx": "e as in bed",
+      "example": { "hy": "է", "ru": "есть / является", "en": "is" },
+      "notes": "Не путать с ե. է — чистый гласный; ещё это форма глагола «быть»."
+    },
+    {
+      "id": "et",
+      "upper": "Ը",
+      "lower": "ը",
+      "name_hy": "ըթ",
+      "ipa": "ə",
+      "ru_approx": "ə (как безударное «э»)",
+      "en_approx": "schwa, a in about",
+      "example": { "hy": "ընկեր", "ru": "друг", "en": "friend" }
+    },
+    {
+      "id": "to",
+      "upper": "Թ",
+      "lower": "թ",
+      "name_hy": "թո",
+      "ipa": "tʰ",
+      "ru_approx": "тʰ (с придыханием)",
+      "en_approx": "t aspirated, as in top",
+      "example": { "hy": "թեյ", "ru": "чай", "en": "tea" },
+      "notes": "Пара к տ [t] без придыхания. Для русского уха сначала звучат одинаково — тренировать пары."
+    },
+    {
+      "id": "zhe",
+      "upper": "Ժ",
+      "lower": "ժ",
+      "name_hy": "ժե",
+      "ipa": "ʒ",
+      "ru_approx": "ж",
+      "en_approx": "zh as in measure",
+      "example": { "hy": "ժամ", "ru": "час / время", "en": "hour / time" }
+    },
+    {
+      "id": "ini",
+      "upper": "Ի",
+      "lower": "ի",
+      "name_hy": "ինի",
+      "ipa": "i",
+      "ru_approx": "и",
+      "en_approx": "ee as in see",
+      "example": { "hy": "իմ", "ru": "мой", "en": "my" }
+    },
+    {
+      "id": "lyun",
+      "upper": "Լ",
+      "lower": "լ",
+      "name_hy": "լյուն",
+      "ipa": "l",
+      "ru_approx": "л",
+      "en_approx": "l",
+      "example": { "hy": "լավ", "ru": "хорошо / хороший", "en": "good" }
+    },
+    {
+      "id": "khe",
+      "upper": "Խ",
+      "lower": "խ",
+      "name_hy": "խե",
+      "ipa": "χ",
+      "ru_approx": "х",
+      "en_approx": "kh as in Bach",
+      "example": { "hy": "խաղ", "ru": "игра", "en": "game" },
+      "notes": "Глухой. Звонкая пара — ղ."
+    },
+    {
+      "id": "tsa",
+      "upper": "Ծ",
+      "lower": "ծ",
+      "name_hy": "ծա",
+      "ipa": "ts",
+      "ru_approx": "ц (без придыхания)",
+      "en_approx": "ts unaspirated",
+      "example": { "hy": "ծառ", "ru": "дерево", "en": "tree" },
+      "notes": "Пара к ց [tsʰ]."
+    },
+    {
+      "id": "ken",
+      "upper": "Կ",
+      "lower": "կ",
+      "name_hy": "կեն",
+      "ipa": "k",
+      "ru_approx": "к (без придыхания)",
+      "en_approx": "k unaspirated, as in skill",
+      "example": { "hy": "կատու", "ru": "кот", "en": "cat" },
+      "notes": "Пара к ք [kʰ]."
+    },
+    {
+      "id": "ho",
+      "upper": "Հ",
+      "lower": "հ",
+      "name_hy": "հո",
+      "ipa": "h",
+      "ru_approx": "h (как английское h)",
+      "en_approx": "h as in hat",
+      "example": { "hy": "հաց", "ru": "хлеб", "en": "bread" }
+    },
+    {
+      "id": "dza",
+      "upper": "Ձ",
+      "lower": "ձ",
+      "name_hy": "ձա",
+      "ipa": "dz",
+      "ru_approx": "дз",
+      "en_approx": "dz",
+      "example": { "hy": "ձուկ", "ru": "рыба", "en": "fish" }
+    },
+    {
+      "id": "ghat",
+      "upper": "Ղ",
+      "lower": "ղ",
+      "name_hy": "ղատ",
+      "ipa": "ʁ",
+      "ru_approx": "ғ (как украинское г / французское r)",
+      "en_approx": "voiced gh, French r",
+      "example": { "hy": "եղբայր", "ru": "брат", "en": "brother" },
+      "notes": "В начале слова редко. Не путать с խ."
+    },
+    {
+      "id": "che",
+      "upper": "Ճ",
+      "lower": "ճ",
+      "name_hy": "ճե",
+      "ipa": "tʃ",
+      "ru_approx": "ч (без придыхания)",
+      "en_approx": "ch unaspirated",
+      "example": { "hy": "ճաշ", "ru": "обед", "en": "lunch" },
+      "notes": "Пара к չ [tʃʰ]."
+    },
+    {
+      "id": "men",
+      "upper": "Մ",
+      "lower": "մ",
+      "name_hy": "մեն",
+      "ipa": "m",
+      "ru_approx": "м",
+      "en_approx": "m",
+      "example": { "hy": "մայր", "ru": "мама", "en": "mother" }
+    },
+    {
+      "id": "yi",
+      "upper": "Յ",
+      "lower": "յ",
+      "name_hy": "յի",
+      "ipa": "j",
+      "ru_approx": "й",
+      "en_approx": "y as in yes",
+      "example": { "hy": "յոթ", "ru": "семь", "en": "seven" }
+    },
+    {
+      "id": "nu",
+      "upper": "Ն",
+      "lower": "ն",
+      "name_hy": "նու",
+      "ipa": "n",
+      "ru_approx": "н",
+      "en_approx": "n",
+      "example": { "hy": "նոր", "ru": "новый", "en": "new" }
+    },
+    {
+      "id": "sha",
+      "upper": "Շ",
+      "lower": "շ",
+      "name_hy": "շա",
+      "ipa": "ʃ",
+      "ru_approx": "ш",
+      "en_approx": "sh",
+      "example": { "hy": "շուն", "ru": "собака", "en": "dog" }
+    },
+    {
+      "id": "vo",
+      "upper": "Ո",
+      "lower": "ո",
+      "name_hy": "վո",
+      "ipa": "ɔ ~ vɔ",
+      "ru_approx": "о / во",
+      "en_approx": "vo at start, o elsewhere",
+      "example": { "hy": "ոչ", "ru": "нет", "en": "no" },
+      "notes": "В начале слова обычно «во»: ոչ, որտեղ. Не путать с օ."
+    },
+    {
+      "id": "cha",
+      "upper": "Չ",
+      "lower": "չ",
+      "name_hy": "չա",
+      "ipa": "tʃʰ",
+      "ru_approx": "чʰ (с придыханием)",
+      "en_approx": "ch aspirated, as in chair",
+      "example": { "hy": "չորս", "ru": "четыре", "en": "four" },
+      "notes": "Пара к ճ [tʃ]."
+    },
+    {
+      "id": "pe",
+      "upper": "Պ",
+      "lower": "պ",
+      "name_hy": "պե",
+      "ipa": "p",
+      "ru_approx": "п (без придыхания)",
+      "en_approx": "p unaspirated, as in spin",
+      "example": { "hy": "պանիր", "ru": "сыр", "en": "cheese" },
+      "notes": "Пара к փ [pʰ]."
+    },
+    {
+      "id": "je",
+      "upper": "Ջ",
+      "lower": "ջ",
+      "name_hy": "ջե",
+      "ipa": "dʒ",
+      "ru_approx": "дж",
+      "en_approx": "j as in jam",
+      "example": { "hy": "ջուր", "ru": "вода", "en": "water" }
+    },
+    {
+      "id": "ra",
+      "upper": "Ռ",
+      "lower": "ռ",
+      "name_hy": "ռա",
+      "ipa": "r",
+      "ru_approx": "р (раскатистое)",
+      "en_approx": "trilled r",
+      "example": { "hy": "ռուսերեն", "ru": "русский язык", "en": "Russian" },
+      "notes": "Пара к ր [ɾ] — одноударному."
+    },
+    {
+      "id": "se",
+      "upper": "Ս",
+      "lower": "ս",
+      "name_hy": "սե",
+      "ipa": "s",
+      "ru_approx": "с",
+      "en_approx": "s",
+      "example": { "hy": "սուրճ", "ru": "кофе", "en": "coffee" }
+    },
+    {
+      "id": "vev",
+      "upper": "Վ",
+      "lower": "վ",
+      "name_hy": "վև",
+      "ipa": "v",
+      "ru_approx": "в",
+      "en_approx": "v",
+      "example": { "hy": "վաղը", "ru": "завтра", "en": "tomorrow" }
+    },
+    {
+      "id": "ti",
+      "upper": "Տ",
+      "lower": "տ",
+      "name_hy": "տի",
+      "ipa": "t",
+      "ru_approx": "т (без придыхания)",
+      "en_approx": "t unaspirated, as in stop",
+      "example": { "hy": "տուն", "ru": "дом", "en": "house / home" },
+      "notes": "Пара к թ [tʰ]."
+    },
+    {
+      "id": "re",
+      "upper": "Ր",
+      "lower": "ր",
+      "name_hy": "րե",
+      "ipa": "ɾ",
+      "ru_approx": "р (одноударное)",
+      "en_approx": "tap r, as in American city",
+      "example": { "hy": "րոպե", "ru": "минута", "en": "minute" },
+      "notes": "Пара к ռ [r]. В начале почти не бывает, кроме րոպե."
+    },
+    {
+      "id": "co",
+      "upper": "Ց",
+      "lower": "ց",
+      "name_hy": "ցո",
+      "ipa": "tsʰ",
+      "ru_approx": "цʰ (с придыханием)",
+      "en_approx": "ts aspirated",
+      "example": { "hy": "ցուրտ", "ru": "холодный / холодно", "en": "cold" },
+      "notes": "Пара к ծ [ts]."
+    },
+    {
+      "id": "u",
+      "upper": "Ու",
+      "lower": "ու",
+      "name_hy": "ու",
+      "ipa": "u",
+      "ru_approx": "у",
+      "en_approx": "oo as in food",
+      "example": { "hy": "ուր", "ru": "куда", "en": "where to" },
+      "notes": "Диграф ո+ւ, но в колоде это одна карточка."
+    },
+    {
+      "id": "pyur",
+      "upper": "Փ",
+      "lower": "փ",
+      "name_hy": "փյուր",
+      "ipa": "pʰ",
+      "ru_approx": "пʰ (с придыханием)",
+      "en_approx": "p aspirated, as in pin",
+      "example": { "hy": "փոքր", "ru": "маленький", "en": "small" },
+      "notes": "Пара к պ [p]."
+    },
+    {
+      "id": "ke",
+      "upper": "Ք",
+      "lower": "ք",
+      "name_hy": "քե",
+      "ipa": "kʰ",
+      "ru_approx": "кʰ (с придыханием)",
+      "en_approx": "k aspirated, as in kit",
+      "example": { "hy": "քույր", "ru": "сестра", "en": "sister" },
+      "notes": "Пара к կ [k]."
+    },
+    {
+      "id": "yev",
+      "upper": "Եվ",
+      "lower": "և",
+      "name_hy": "և",
+      "ipa": "ɛv ~ jɛv",
+      "ru_approx": "ев / йев",
+      "en_approx": "ev / yev",
+      "example": { "hy": "և", "ru": "и", "en": "and" },
+      "notes": "Лигатура. В начале слова обычно «йев»."
+    },
+    {
+      "id": "o",
+      "upper": "Օ",
+      "lower": "օ",
+      "name_hy": "օ",
+      "ipa": "o",
+      "ru_approx": "о",
+      "en_approx": "o as in more",
+      "example": { "hy": "օր", "ru": "день", "en": "day" },
+      "notes": "Не путать с ո. օ всегда «о», без «в» в начале."
+    },
+    {
+      "id": "fe",
+      "upper": "Ֆ",
+      "lower": "ֆ",
+      "name_hy": "ֆե",
+      "ipa": "f",
+      "ru_approx": "ф",
+      "en_approx": "f",
+      "example": { "hy": "ֆիլմ", "ru": "фильм", "en": "film" },
+      "notes": "Поздняя буква, в основном в заимствованиях."
+    }
+  ]
+}

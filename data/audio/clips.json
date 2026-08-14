@@ -1,0 +1,204 @@
+{
+  "source_file": "alphabet-eastern.mp3",
+  "license": "CC BY-SA 3.0",
+  "author": "Vahagn Petrosyan",
+  "source": "https://commons.wikimedia.org/wiki/File:Armenian_alphabet_(Eastern_Armenian).ogg",
+  "notes": "Отдельные wav, чтобы не перематывать длинный mp3. 34-е имя в записи — ւ, его нет в колоде; ու и և — два последних.",
+  "clips": {
+    "ayb": {
+      "file": "letters/ayb.wav",
+      "start": 0.52,
+      "end": 0.94
+    },
+    "ben": {
+      "file": "letters/ben.wav",
+      "start": 1.46,
+      "end": 1.8
+    },
+    "gim": {
+      "file": "letters/gim.wav",
+      "start": 2.52,
+      "end": 2.86
+    },
+    "da": {
+      "file": "letters/da.wav",
+      "start": 3.64,
+      "end": 3.96
+    },
+    "ech": {
+      "file": "letters/ech.wav",
+      "start": 4.61,
+      "end": 4.96
+    },
+    "za": {
+      "file": "letters/za.wav",
+      "start": 5.54,
+      "end": 5.91
+    },
+    "e": {
+      "file": "letters/e.wav",
+      "start": 6.55,
+      "end": 6.91
+    },
+    "et": {
+      "file": "letters/et.wav",
+      "start": 7.58,
+      "end": 7.91
+    },
+    "to": {
+      "file": "letters/to.wav",
+      "start": 8.52,
+      "end": 9.05
+    },
+    "zhe": {
+      "file": "letters/zhe.wav",
+      "start": 9.63,
+      "end": 10.1
+    },
+    "ini": {
+      "file": "letters/ini.wav",
+      "start": 10.7,
+      "end": 11.24
+    },
+    "lyun": {
+      "file": "letters/lyun.wav",
+      "start": 11.74,
+      "end": 12.19
+    },
+    "khe": {
+      "file": "letters/khe.wav",
+      "start": 12.91,
+      "end": 13.24
+    },
+    "tsa": {
+      "file": "letters/tsa.wav",
+      "start": 13.99,
+      "end": 14.33
+    },
+    "ken": {
+      "file": "letters/ken.wav",
+      "start": 15.09,
+      "end": 15.44
+    },
+    "ho": {
+      "file": "letters/ho.wav",
+      "start": 16.18,
+      "end": 16.54
+    },
+    "dza": {
+      "file": "letters/dza.wav",
+      "start": 17.35,
+      "end": 17.72
+    },
+    "ghat": {
+      "file": "letters/ghat.wav",
+      "start": 18.3,
+      "end": 18.69
+    },
+    "che": {
+      "file": "letters/che.wav",
+      "start": 19.41,
+      "end": 19.78
+    },
+    "men": {
+      "file": "letters/men.wav",
+      "start": 20.48,
+      "end": 20.88
+    },
+    "yi": {
+      "file": "letters/yi.wav",
+      "start": 21.66,
+      "end": 22.06
+    },
+    "nu": {
+      "file": "letters/nu.wav",
+      "start": 22.69,
+      "end": 23.11
+    },
+    "sha": {
+      "file": "letters/sha.wav",
+      "start": 23.78,
+      "end": 24.22
+    },
+    "vo": {
+      "file": "letters/vo.wav",
+      "start": 24.87,
+      "end": 25.28
+    },
+    "cha": {
+      "file": "letters/cha.wav",
+      "start": 26.01,
+      "end": 26.42
+    },
+    "pe": {
+      "file": "letters/pe.wav",
+      "start": 27.13,
+      "end": 27.48
+    },
+    "je": {
+      "file": "letters/je.wav",
+      "start": 28.3,
+      "end": 28.64
+    },
+    "ra": {
+      "file": "letters/ra.wav",
+      "start": 29.38,
+      "end": 29.83
+    },
+    "se": {
+      "file": "letters/se.wav",
+      "start": 30.7,
+      "end": 31.05
+    },
+    "vev": {
+      "file": "letters/vev.wav",
+      "start": 31.96,
+      "end": 32.32
+    },
+    "ti": {
+      "file": "letters/ti.wav",
+      "start": 33.11,
+      "end": 33.46
+    },
+    "re": {
+      "file": "letters/re.wav",
+      "start": 34.17,
+      "end": 34.65
+    },
+    "co": {
+      "file": "letters/co.wav",
+      "start": 35.33,
+      "end": 35.77
+    },
+    "pyur": {
+      "file": "letters/pyur.wav",
+      "start": 37.38,
+      "end": 37.89
+    },
+    "ke": {
+      "file": "letters/ke.wav",
+      "start": 38.53,
+      "end": 38.89
+    },
+    "o": {
+      "file": "letters/o.wav",
+      "start": 39.63,
+      "end": 39.97
+    },
+    "fe": {
+      "file": "letters/fe.wav",
+      "start": 40.73,
+      "end": 41.08
+    },
+    "u": {
+      "file": "letters/u.wav",
+      "start": 41.85,
+      "end": 42.21
+    },
+    "yev": {
+      "file": "letters/yev.wav",
+      "start": 42.89,
+      "end": 43.43
+    }
+  }
+}

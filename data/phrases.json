@@ -1,0 +1,104 @@
+{
+  "script": "eastern",
+  "notes": "Бытовые куски, не изолированные слова. hy — то, что надо уметь сказать и узнать на слух. Транслит в карточки не кладём.",
+  "phrases": [
+    {
+      "id": "barev",
+      "hy": "Բարև",
+      "ru": "Привет",
+      "en": "Hi",
+      "tags": ["greeting"]
+    },
+    {
+      "id": "barev-dzez",
+      "hy": "Բարև ձեզ",
+      "ru": "Здравствуйте",
+      "en": "Hello (polite)",
+      "tags": ["greeting", "polite"]
+    },
+    {
+      "id": "inchpes-ek",
+      "hy": "Ինչպե՞ս եք",
+      "ru": "Как дела? (вежливо)",
+      "en": "How are you?",
+      "tags": ["greeting", "polite"]
+    },
+    {
+      "id": "lav-em",
+      "hy": "Լավ եմ",
+      "ru": "Хорошо (я в порядке)",
+      "en": "I'm fine",
+      "tags": ["greeting"]
+    },
+    {
+      "id": "shnorhakalutyun",
+      "hy": "Շնորհակալություն",
+      "ru": "Спасибо",
+      "en": "Thank you",
+      "tags": ["polite"]
+    },
+    {
+      "id": "khndrum-em",
+      "hy": "Խնդրում եմ",
+      "ru": "Пожалуйста / прошу",
+      "en": "Please / you're welcome",
+      "tags": ["polite"]
+    },
+    {
+      "id": "nereceq",
+      "hy": "Ներեցեք",
+      "ru": "Извините",
+      "en": "Excuse me / sorry",
+      "tags": ["polite"]
+    },
+    {
+      "id": "ayo",
+      "hy": "Այո",
+      "ru": "Да",
+      "en": "Yes",
+      "tags": ["core"]
+    },
+    {
+      "id": "voch",
+      "hy": "Ոչ",
+      "ru": "Нет",
+      "en": "No",
+      "tags": ["core"]
+    },
+    {
+      "id": "chem-haskanum",
+      "hy": "Չեմ հասկանում",
+      "ru": "Я не понимаю",
+      "en": "I don't understand",
+      "tags": ["survival"]
+    },
+    {
+      "id": "ruseren-khosum-ek",
+      "hy": "Դուք ռուսերեն խոսու՞մ եք",
+      "ru": "Вы говорите по-русски?",
+      "en": "Do you speak Russian?",
+      "tags": ["survival"]
+    },
+    {
+      "id": "uzum-em",
+      "hy": "Ուզում եմ …",
+      "ru": "Я хочу …",
+      "en": "I want …",
+      "tags": ["survival", "verb"]
+    },
+    {
+      "id": "inch-arzhe",
+      "hy": "Ինչ արժե",
+      "ru": "Сколько стоит?",
+      "en": "How much is it?",
+      "tags": ["survival", "shop"]
+    },
+    {
+      "id": "vortegh-e",
+      "hy": "Որտե՞ղ է …",
+      "ru": "Где находится …?",
+      "en": "Where is …?",
+      "tags": ["survival"]
+    }
+  ]
+}

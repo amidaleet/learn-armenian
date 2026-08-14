@@ -1,0 +1,169 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f1e8;
+  --bg-card: #fffdf8;
+  --ink: #1c1916;
+  --muted: #6b6258;
+  --line: #e4d9c8;
+  --accent: #b42318;
+  --accent-soft: #f8e4df;
+  --ok: #1f7a4d;
+  --ok-soft: #e3f4ea;
+  --bad: #b42318;
+  --bad-soft: #f8e4df;
+  --shadow: 0 12px 32px rgba(28, 25, 22, 0.08);
+  font-family: "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+.wrap {
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 64px;
+}
+
+header h1,
+.hero h1 {
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 8px;
+}
+
+.lede,
+.muted {
+  color: var(--muted);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: #c9bba6;
+}
+
+.btn[hidden] {
+  display: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-choice {
+  width: 100%;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.btn-choice.is-ok {
+  background: var(--ok-soft);
+  border-color: var(--ok);
+}
+
+.btn-choice.is-bad {
+  background: var(--bad-soft);
+  border-color: var(--bad);
+}
+
+.games {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.game-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.game-link h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.letter {
+  font-size: clamp(5rem, 18vw, 8rem);
+  line-height: 1;
+  text-align: center;
+  margin: 12px 0 8px;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.feedback {
+  min-height: 4.8em;
+  margin-top: 16px;
+}
+
+.feedback strong {
+  color: var(--ok);
+}
+
+.feedback.is-bad strong {
+  color: var(--bad);
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+nav.crumb {
+  margin-bottom: 20px;
+}
+
+nav.crumb a {
+  text-decoration: none;
+}
